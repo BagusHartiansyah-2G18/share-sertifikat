@@ -26,7 +26,8 @@ window.onload=async function (){
             && v[2].substring(0,1)==juarav
         );
         if(dfilter.length==0){
-            // untuk load peserta 
+            // untuk load peserta
+            return alert("data tersebut tidak ditemukan !!!");
         }else{
             const result = dfilter[0];
             rediracToFile(String(result[1]).replace(" ","_")+".pdf")
@@ -35,5 +36,5 @@ window.onload=async function (){
 }
 
 function rediracToFile(files){ 
-    window.open(window.location.href+"/../src/file/"+files, "_blank");
+    window.open(window.location.href+"/../src/file/"+String(files).toUpperCase(), "_blank");
 }
