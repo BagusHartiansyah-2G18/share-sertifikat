@@ -30,11 +30,11 @@ window.onload=async function (){
             return alert("data tersebut tidak ditemukan !!!");
         }else{
             const result = dfilter[0];
-            rediracToFile(String(result[1]).replace(" ","_")+".pdf")
+            rediracToFile(String(result[1]).replace(" ","_"))
         }    
     }
 }
 
 function rediracToFile(files){ 
-    window.open(window.location.href+"/../src/file/"+String(files).toUpperCase(), "_blank");
+    window.open(window.location.href+"/../src/file/"+String(files).toUpperCase()+".pdf", "_blank");
 }
